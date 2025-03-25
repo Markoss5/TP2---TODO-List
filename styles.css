@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#todo-form {
+    margin-bottom: 20px;
+}
+
+.input-item {
+    padding: 8px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+#input-button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#listado ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#listado li {
+    background: #f4f4f4;
+    margin: 5px auto;
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#listado li.completado span {
+    text-decoration: line-through;
+    color: gray;
+}
