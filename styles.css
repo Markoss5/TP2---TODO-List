@@ -1,43 +1,104 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
+    background: #1e1e2f;
+    color: white;
+    margin: 0;
+    padding: 20px;
 }
 
+/* Contenedor principal */
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: #282a36;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulario */
 #todo-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
 .input-item {
-    padding: 8px;
-    width: 300px;
-    margin-right: 10px;
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background: #44475a;
+    color: white;
 }
 
 #input-button {
-    padding: 8px 12px;
-    background-color: #28a745;
-    color: white;
+    padding: 12px 20px;
+    background: #50fa7b;
+    color: black;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
+#input-button:hover {
+    background: #40d975;
+}
+
+/* Lista de tareas */
 #listado ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #listado li {
-    background: #f4f4f4;
-    margin: 5px auto;
-    padding: 10px;
-    width: 50%;
-    border-radius: 5px;
+    background: #6272a4;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#listado li:hover {
+    background: #7087c4;
+    transform: scale(1.02);
+}
+
+/* Alinear checkbox y texto */
+#listado li label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+/* Checkbox personalizado */
+#listado li input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #50fa7b;
+}
+
+/* Estilo para tareas completadas */
+#listado li.completado {
+    background: #44475a;
+    text-decoration: line-through;
+    color: #bdbdbd;
 }
 
 #listado li.completado span {
-    text-decoration: line-through;
-    color: gray;
+    opacity: 0.7;
 }
